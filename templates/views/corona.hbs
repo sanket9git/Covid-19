@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>css}}
+  {{!--
+  <link rel="stylesheet" href="css/style.css" /> --}}
+
+</head>
+
+<body>
+
+  {{>navbar}}
+
+
+  <div class="containter-fluid ">
+
+
+    <div class="row">
+      <div class="grand_parent">
+        <p id="visitor"></p>
+        <h1>maharashtra</h1>
+        <h3 id="upToDate">Last Updated on 20 May, 9:15 PM IST</h3>
+        <h2><img src="image/sheild.svg" alt=""> <span id="vac">  </span> vaccine doses administered</h2>
+        <h2 id="statepol" > </h2>
+
+        <div class="parents">
+
+          <div class="child">
+            <p>Confirmed </p>
+            <p><i class="fa fa-users" aria-hidden="true"></i></p>
+            <div class="foot">
+              <p> <span id="contotal">2433367</span> <span class="data_hide" style="font-size: 1.5rem;color:red;"> <i
+                    class="fas fa-arrow-up"></i> <b id="condelta"> </b> </span></p>
+            </div>
+          </div>
+
+          <div class="child">
+            <p>Active </p>
+            <p><i class="fa fa-users" aria-hidden="true"></i></p>
+            <div class="foot">
+              <p> <span id="acttotal">2433367</span>  <b id="actdelta"> </b> </p>
+            </div>
+          </div>
+
+          <div class="child">
+            <p> Recovered</p>
+            <p><i class="fa fa-users" aria-hidden="true"></i></p>
+            <div class="foot">
+              <p> <span id="rectotal">2433367</span> <span class="data_hide" style="font-size: 1.5rem;color:#25ff00;"> <i
+                    class="fas fa-arrow-up"></i> <b id="recdelta"> </b> </span></p>
+            </div>
+          </div>
+
+          <div class="child">
+            <p>Deceased </p>
+            <p><i class="fa fa-users" aria-hidden="true"></i></p>
+            <div class="foot">
+              <p> <span id="dectotal">2433367</span> <span class="data_hide" style="font-size: 1.5rem;color:	#fffceb;"> <i
+                    class="fas fa-arrow-up"></i> <b id="decdelta"> </b> </span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-10 col-12 mx-auto">
+
+        <div class="main_content">
+          <form action="" class="co_form">
+            <input type="text" id="distName" placeholder="Enter your district name" autocomplete="off">
+            <input type="submit" value="search" id="submitBtn">
+          </form>
+        </div>
+
+
+
+
+        <div class="covidinfo ">
+          <div class="top_layer">
+            <h2 id="dist_name"></h2>
+            <p id="today_date">  </p>
+
+          </div>
+          <p    id="update"><b></b> </p>
+          <div class="main_layer">
+
+            <p id="distpol" class="data_hide1"> get output here</p>
+            <div class="layer data_hide1">
+
+              <div class="middle_layer ">
+                <div class="flexparents ">
+
+                  <div class="flexchild ">
+                    <p style="color: red;"> Confirmed </p>
+                    <p> <span id="distcon" class="shadow">2433367</span> <span class="data_hide2" style="font-size: 1.5rem;color:red;">
+                        <i class="fas fa-arrow-up"></i> <b id="ddcon"> </b> </span></p>
+                  </div>
+
+                  <div class="flexchild">
+                    <p style="color: blue;">Active </p>
+                    <p> <span id="distact" class="shadow">2433367</span> <span class="data_hide2" style="font-size: 1.5rem;color:blue;">
+                        <i class="fas fa-arrow-up"></i> <b id="ddact"> </b> </span></p>
+
+                  </div>
+                  <div class="flexchild">
+                    <p style="color: green;"> Recovered </p>
+                    <p> <span id="distrec" class="shadow">2433367</span> <span class="data_hide2" style="font-size: 1.5rem;color:darkgreen;">
+                        <i class="fas fa-arrow-up"></i> <b id="ddrec"> </b> </span></p>
+
+                  </div>
+                  <div class="flexchild">
+                    <p style="color: grey;">Deceased </p>
+                    <p> <span id="distdec" class="shadow">2433367</span> <span class="data_hide2" style="font-size: 1.5rem;color:grey;">
+                        <i class="fas fa-arrow-up"></i> <b id="dddec"> </b> </span></p>
+
+                  </div>
+
+                  <div class="flexchild">
+                    <p style="color: purple;">Other </p>
+                    <p> <span id="distoth" class="shadow">2433367</span> <span class="data_hide2" style="font-size: 1.5rem;color:blueviolet;">
+                        <i class="fas fa-arrow-up"></i> <b id="ddoth"> </b> </span></p>
+
+                  </div>
+
+                  <div class="flexchild">
+                    <p style="color:#005b96;">vaccinated </p>
+                    <p> <span id="distvac" class="shadow">2433367</span> <span class="data_hide2" style="font-size: 1.5rem;color:forestgreen;">
+                        <i class="fas fa-arrow-up"></i> <b id="ddvac"> </b> </span></p>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  {{>footer}}
+
+<script src="js/main.js"></script>
+<script src="js/covid.js"></script>
+
+<script>
+      const today_date = document.getElementById("today_date");
+    const getCurrentDay = () => {
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tue";
+        weekday[3] = "Wed";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        let currentTime = new Date();
+        let day = weekday[currentTime.getDay()];
+        return day;
+      };
+
+      const getCurrentTime = () => {
+        var months = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "June",
+          "July",
+          "Aug",
+          "Sept",
+          "Oct",
+          "Nov",
+          "Dec",
+        ];
+
+        var now = new Date();
+        var month = months[now.getMonth()];
+        var date = now.getDate();
+
+        let hours = now.getHours();
+        let mins = now.getMinutes();
+
+        let periods = "AM";
+
+        if (hours > 11) {
+          periods = "PM";
+          if (hours > 12) hours -= 12;
+        }
+        if (mins < 10) {
+          mins = "0" + mins;
+        }
+
+        return `${month} ${date} | ${hours}:${mins}${periods}`;
+      };
+console.log(getCurrentDay() + " | " + getCurrentTime());
+      today_date.innerHTML = getCurrentDay() + " | " + getCurrentTime();
+    </script>
+
+      
+
+</body>
+
+</html>
