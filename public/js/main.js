@@ -35,7 +35,7 @@ const printHelloWorld = async() => {
     const response = await fetch(url);
     const data = await response.json();
     const arrData = [data];
-    console.log(arrData[0].MH.districts);
+    // console.log(arrData[0].MH.districts);
 
     var i;
     for (i = 0; i < dataHide.length; i++) {
@@ -79,13 +79,13 @@ const printHelloWorld = async() => {
 
 
       
-      console.log(F);
+      // console.log(F);
     }else{
       var i;
     for (i = 0; i < dataHide.length; i++) {
       dataHide[i].style.display = "none";
       }
-      console.log(error);
+      // console.log(error);
     }
     
 
@@ -107,7 +107,7 @@ const count = async()=>{
   const response = await fetch('https://api.countapi.xyz/update/covid19/c5079aff-9875-44af-b1c0-f24ac2a72e98/?amount=1');
   const data = await response.json();
   const arrData = [data];
-  console.log(arrData[0].value);
+  // console.log(arrData[0].value);
   visitor.innerText = `visitor : ${arrData[0].value}`;
 }
 count();

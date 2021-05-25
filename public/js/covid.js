@@ -45,7 +45,7 @@ const getInfo = async (event) => {
 
     if (currentDist == "") {
         update.innerText = `Please write the district name before search`;
-        // update.innerText = `Try Again`;
+        dist_name.innerText = `Try Again`;
         var i;
         for (i = 0; i < dataHide1.length; i++) {
             dataHide1[i].style.display = "none";
@@ -68,7 +68,7 @@ const getInfo = async (event) => {
 
 
 
-            console.log(newdata.meta.population);
+            // console.log(newdata.meta.population);
 
             dist_name.innerText = currentDist;
             update.innerText = `Last Updated on  ${arrData[0].MH.meta.last_updated}`
@@ -99,7 +99,7 @@ const getInfo = async (event) => {
 
 
 
-            console.log("distdelta");
+            // console.log("distdelta");
 
             if (distdelta !== "undefined"){
                 const N = parseInt(newdata.delta.confirmed).toLocaleString('en-IN');
@@ -116,7 +116,7 @@ const getInfo = async (event) => {
                 dddec.innerText = P;
                 ddoth.innerText = Q;
                 ddvac.innerText = R;
-console.log("dab")
+// console.log("dab")
                 var p;
                 for (p = 0; p < dataHide2.length; p++) {
                     dataHide2[p].style.display = "inline";
@@ -133,6 +133,8 @@ console.log("dab")
 
         }catch {
             update.innerText = `Please enter the dist name properly`;
+            dist_name.innerText = `Try Again`;
+
             var i;
             for (i = 0; i < dataHide1.length; i++) {
                 dataHide1[i].style.display = "none";
