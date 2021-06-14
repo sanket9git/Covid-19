@@ -86,7 +86,7 @@ const getInfo = async (event) => {
 
             const K = parseInt(newdata.total.deceased).toLocaleString('en-IN');
             const L = parseInt(newdata.total.other).toLocaleString('en-IN');
-            const M = parseInt(newdata.total.vaccinated).toLocaleString('en-IN');
+            const M = parseInt(newdata.total.vaccinated1 + newdata.total.vaccinated2).toLocaleString('en-IN');
             distcon.innerText = H;
             distact.innerText = I;
             distrec.innerText = J;
@@ -110,7 +110,7 @@ const getInfo = async (event) => {
 
                 const P = parseInt(newdata.delta.deceased).toLocaleString('en-IN');
                 const Q = parseInt(newdata.delta.other).toLocaleString('en-IN');
-                const R = parseInt(newdata.delta.vaccinated).toLocaleString('en-IN');
+                const R = parseInt(newdata.delta.vaccinated1 + newdata.delta.vaccinated2).toLocaleString('en-IN');
                 ddcon.innerText = N;
                 ddrec.innerText = O;
                 dddec.innerText = P;

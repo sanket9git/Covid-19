@@ -43,7 +43,7 @@ const printHelloWorld = async() => {
       }
 
     upToDate.innerText =`Last Updated on  ${arrData[0].MH.meta.last_updated}`
-    const vacci =parseInt(arrData[0].MH.total.vaccinated).toLocaleString('en-IN');
+    const vacci =parseInt(arrData[0].MH.total.vaccinated1 + arrData[0].MH.total.vaccinated2).toLocaleString('en-IN');
     vac.innerText =vacci;
 
     const popu =parseInt(arrData[0].MH.meta.population).toLocaleString('en-IN');
